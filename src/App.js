@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Search from "./Search";
+
+
 
 function App() {
+
+  // const [todos, settodos] = useState([{
+  //   text:'this is a sample todo',
+  //   isDone:false
+  // },])
+
+  // const addTodo = (text) => {
+  //   const newTodos = [...todos,{text}]
+  //   settodos(newTodos)
+  // }
+
+  // const handleclick = ()=>{
+   
+    
+  // }
+
+const [todo, settodo] = useState('one')
+
+const addTodo = (text)=>{
+ const newTodo= [...todo,{text}]
+ settodo(newTodo)
+ return newTodo
+}
+
+const handleClick =()=>{
+  addTodo('two')
+}
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* <Search/>
+    <button on
+    Click={()=>handleclick()}>click</button>
+    */}
+
+    {todo}
+   <button onClick = {()=>handleClick()}> click me</button>
     </div>
   );
 }
