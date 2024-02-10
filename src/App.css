@@ -1,8 +1,10 @@
 .App{
   max-width: 860px;
   margin: 40px auto;
+  
 }
 
 button{
-  
+  color:rgb(213, 204, 210);
+  background-color: black;
 }
